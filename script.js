@@ -18,9 +18,13 @@ $.ajax({
     url: queryUrl,
     method:'GET',
 }).then(function(response){
-    console.log(response)
-    $('#cName').text(response.city.name)
-    $('#temp').text()
+    $('#cName').text(response.city.name);
+    var farin = (response.list[3].main.temp - 273.15) * 1.80 +32;
+     $('#temp').text('Temperature: ' + farin.toFixed() + '°F');
+     $('#humid').text('Humidity: ' + response.list[0].main.humidity);
+     
+     $('#wind').text('Wind Speed: ' + response.list[3].wind.speed + ' MPH');
+     console.log(response)
 });
 });
 
