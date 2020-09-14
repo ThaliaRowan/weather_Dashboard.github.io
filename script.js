@@ -28,10 +28,20 @@ function myWeather(){
         $('#cName').text(response.name);
         //var farin = (response.list[0].main.temp - 273.15) * 1.80 +32;
          $('#temp').text('Temperature: ' + response.main.temp + '°F');
-         $('#humid').text('Humidity: ' + response.main.humidity);
+         $('#humid').text('Humidity: ' + response.main.humidity + '%');
          $('#wind').text('Wind Speed: ' + response.wind.speed + ' MPH');
 
+         var lat = response.coord.lat;
+         var lon = response.coord.lon;
+         var queryUrl2 = 'http://api.openweathermap.org/data/2.5/uvi?appid=' + myApi + '&lat=' + lat + '&lon=' + lon;
 
+         $.ajax({
+             url: queryUrl2,
+             method: 'GET',
+         }).then(function(res){
+             console.log(res);
+             $('#uv').text('UV Index: ' + res.value)
+         })
     });
 
 
