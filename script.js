@@ -15,7 +15,8 @@ $('#cityName').on('click', function(event){
     myWeather()
 
     var liEl = $('<li>')
-     $(liEl).text(words)
+     $(liEl).text(words);
+     $(liEl).addClass("list-group-item")
     $('#aList').append(liEl);
     
   
@@ -45,7 +46,10 @@ function myWeather(){
              method: 'GET',
          }).then(function(res){
              console.log(res);
-             $('#uv').text('UV Index: ' + res.value)
+             $('#uv').text(res.value);
+             $('#uv').css('border', '2px solid black')
+            
+
             
          })
 
