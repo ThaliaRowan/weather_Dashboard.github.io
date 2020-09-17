@@ -19,6 +19,25 @@ $('#cityName').on('click', function(event){
      $(liEl).addClass("list-group-item")
     $('#aList').append(liEl);
     
+    
+    var day1 = new moment().add(1, 'day');
+    $('#d1').text(moment().format(day1.format('l')));
+
+     
+    var day2 = new moment().add(2, 'day');
+    $('#d2').text(moment().format(day2.format('l')));
+
+     
+    var day3 = new moment().add(3, 'day');
+    $('#d3').text(moment().format(day3.format('l')));
+
+     
+    var day4 = new moment().add(4, 'day');
+    $('#d4').text(moment().format(day4.format('l')));
+
+     
+    var day5 = new moment().add(5, 'day');
+    $('#d5').text(moment().format(day5.format('l')));
   
 });
 
@@ -31,7 +50,7 @@ function myWeather(){
         method:'GET',
     }).then(function(response){
         console.log(response)
-        $('#cName').text(response.name);
+        $('#cName').text(response.name + ' ' + '(' + moment().format('l') + ')');
         var iconCode = response.weather[0].icon;
         $('#myImg').attr('src' , 'http://openweathermap.org/img/wn/' + iconCode + '.png');
          $('#temp').text('Temperature: ' + response.main.temp + '°F');
