@@ -69,12 +69,12 @@ function myWeather(){
              console.log(res);
              $('#uv').text(res.value);
              $('#uv').addClass('uvBord');
-             if (res.value >= 0 || res.value <= 2){
-                 $('#uv').css('background-color', 'green');
-             } else if (res.value >=3 || res.value <= 7){
-                 $('#uv').css('background-color', 'orange');
+             if (res.value >= 0 && res.value <= 2){
+                 $('#uv').addClass('good');
+             } else if (res.value >=3 && res.value <= 7){
+                 $('#uv').addClass('okay');
              } else if (res.value >= 8){
-                 $('#uv').css('background-color', 'red');
+                 $('#uv').addClass('bad');
              }
             
 
