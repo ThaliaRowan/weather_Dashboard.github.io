@@ -58,7 +58,7 @@ function myWeather(){
         console.log(response)
         $('#cName').text(response.name + ' ' + '(' + moment().format('l') + ')');
         var iconCode = response.weather[0].icon;
-        $('#myImg').attr('src' , 'http://openweathermap.org/img/wn/' + iconCode + '.png');
+        $('#myImg').attr('src' , 'https://openweathermap.org/img/wn/' + iconCode + '.png');
          $('#temp').text('Temperature: ' + response.main.temp + '°F');
          $('#humid').text('Humidity: ' + response.main.humidity + '%');
          $('#wind').text('Wind Speed: ' + response.wind.speed + ' MPH');
@@ -97,23 +97,23 @@ function myWeather(){
              var weathicon1 = newRes.list[3].weather[0].icon;
              $('#T1').text('Temp: ' + newRes.list[3].main.temp  + '°F');
              $('#h1').text('Humidity:' + newRes.list[3].main.humidity + '%');
-             $('#img1').attr('src' , 'http://openweathermap.org/img/wn/' + weathicon1 + '.png');
+             $('#img1').attr('src' , 'https://openweathermap.org/img/wn/' + weathicon1 + '.png');
              var weathicon2 = newRes.list[11].weather[0].icon;
              $('#T2').text('Temp: ' + newRes.list[11].main.temp  + '°F');
              $('#h2').text('Humidity:' + newRes.list[11].main.humidity + '%');
-             $('#img2').attr('src' , 'http://openweathermap.org/img/wn/' + weathicon2 + '.png');
+             $('#img2').attr('src' , 'https://openweathermap.org/img/wn/' + weathicon2 + '.png');
              var weathicon3 = newRes.list[19].weather[0].icon;
              $('#T3').text('Temp: ' + newRes.list[19].main.temp  + '°F');
              $('#h3').text('Humidity:' + newRes.list[19].main.humidity + '%');
-             $('#img3').attr('src' , 'http://openweathermap.org/img/wn/' + weathicon3 + '.png');
+             $('#img3').attr('src' , 'https://openweathermap.org/img/wn/' + weathicon3 + '.png');
              var weathicon4 = newRes.list[27].weather[0].icon;
              $('#T4').text('Temp: ' + newRes.list[27].main.temp  + '°F');
              $('#h4').text('Humidity:' + newRes.list[27].main.humidity + '%');
-             $('#img4').attr('src' , 'http://openweathermap.org/img/wn/' + weathicon4 + '.png');
+             $('#img4').attr('src' , 'https://openweathermap.org/img/wn/' + weathicon4 + '.png');
              var weathicon5 = newRes.list[35].weather[0].icon;
              $('#T5').text('Temp: ' + newRes.list[35].main.temp  + '°F');
              $('#h5').text('Humidity:' + newRes.list[35].main.humidity + '%');
-             $('#img5').attr('src' , 'http://openweathermap.org/img/wn/' + weathicon5 + '.png');
+             $('#img5').attr('src' , 'https://openweathermap.org/img/wn/' + weathicon5 + '.png');
 
 
 
