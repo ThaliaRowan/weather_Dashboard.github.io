@@ -68,7 +68,7 @@ function myWeather(){
 
          var lat = response.coord.lat;
          var lon = response.coord.lon;
-         var queryUrl2 = 'http://api.openweathermap.org/data/2.5/uvi?appid=' + myApi + '&lat=' + lat + '&lon=' + lon;
+         var queryUrl2 = 'https://api.openweathermap.org/data/2.5/uvi?appid=' + myApi + '&lat=' + lat + '&lon=' + lon;
 
          $.ajax({
              url: queryUrl2,
